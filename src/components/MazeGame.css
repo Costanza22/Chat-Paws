@@ -1,0 +1,157 @@
+.maze-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.maze-container h2 {
+  color: #FF69B4;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.maze-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #FFE4E1;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #FF69B4;
+}
+
+.power-up {
+  color: #FFD700;
+  font-weight: bold;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.maze-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 20px;
+  background: #FFE4E1;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.maze-row {
+  display: flex;
+  gap: 2px;
+}
+
+.maze-cell {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  position: relative;
+  background: #FFF;
+}
+
+.maze-cell.wall {
+  background: #FFB6C1;
+}
+
+.maze-cell.goal {
+  background: #98FB98;
+}
+
+.maze-cell.player {
+  background: #FF69B4;
+  color: white;
+  animation: bounce 0.5s infinite alternate;
+}
+
+.maze-cell .dot {
+  color: #FF69B4;
+  font-size: 20px;
+  position: absolute;
+  z-index: 1;
+}
+
+.maze-cell .power-pellet {
+  color: #FFD700;
+  font-size: 20px;
+  position: absolute;
+  z-index: 1;
+  animation: pulse 1s infinite;
+}
+
+@keyframes bounce {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+.ghost {
+  position: absolute;
+  font-size: 24px;
+  animation: float 2s infinite ease-in-out;
+  z-index: 2;
+}
+
+.ghost.red { color: #FF0000; }
+.ghost.pink { color: #FF69B4; }
+.ghost.blue { color: #0000FF; }
+
+.ghost.scared {
+  animation: scared 0.5s infinite alternate;
+  color: #0000FF;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes scared {
+  0% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.maze-instructions {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #FF69B4;
+  line-height: 1.5;
+}
+
+.reset-button {
+  background: #FF69B4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.reset-button:hover {
+  background: #FF1493;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 20, 147, 0.3);
+}
+
+.reset-button:active {
+  transform: translateY(1px);
+} 

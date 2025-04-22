@@ -1,0 +1,194 @@
+.food-guide {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.guide-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.guide-header h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.guide-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--secondary-color);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.tab-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tab-button.active {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.guide-content {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 400px;
+}
+
+/* Tabela Nutricional */
+.nutritional-table {
+  overflow-x: auto;
+}
+
+.nutritional-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.nutritional-table th,
+.nutritional-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.nutritional-table th {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.nutritional-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Receitas Caseiras */
+.recipes-list {
+  display: grid;
+  gap: 20px;
+}
+
+.recipe-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.recipe-ingredients,
+.recipe-preparation,
+.recipe-portion {
+  margin-bottom: 15px;
+}
+
+.recipe-ingredients ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Alimentos Proibidos */
+.forbidden-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.forbidden-item {
+  background: #fff3f3;
+  border-radius: 10px;
+  padding: 15px;
+  border-left: 4px solid #ff4444;
+}
+
+.forbidden-item h4 {
+  color: #ff4444;
+  margin-bottom: 10px;
+}
+
+/* Cronograma de Alimentação */
+.schedule-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.schedule-tab {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--secondary-color);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.schedule-tab.active {
+  background-color: var(--primary-color);
+}
+
+.schedule-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-content th,
+.schedule-content td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.schedule-content th {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .guide-tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tab-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .forbidden-list {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-tabs {
+    flex-direction: column;
+  }
+
+  .schedule-tab {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+} 
