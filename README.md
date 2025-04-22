@@ -41,7 +41,7 @@ ChatPaws é um assistente virtual veterinário que oferece suporte e informaçõ
 ## 📦 Como Instalar
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/chatpaws.git
+git clone https://github.com/Costanza22/chatpaws.git
 ```
 
 2. Instale as dependências:
